@@ -296,7 +296,10 @@ public class ContactsServicePlugin implements MethodCallHandler, FlutterPlugin, 
           Log.e(LOG_TAG, "onActivityResult - cursor.moveToFirst() returns false");
           finishWithResult(FORM_OPERATION_CANCELED);
         }}else{return true;}
+        if(cursor != null){
+       
         cursor.close();
+        }
         return true;
       }
 
